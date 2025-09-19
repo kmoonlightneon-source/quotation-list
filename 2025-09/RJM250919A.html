@@ -129,31 +129,5 @@
             <p class="mt-8">Thank you for your interest in a custom neon sign from <span class="font-bold">Moonlight Neon</span>!</p>
         </footer>
     </div>
-
-    <!-- PDF Generation Button - Placed outside the main container to not be included in the PDF itself -->
-    <div class="fixed bottom-8 right-8 z-50">
-        <button id="download-pdf-btn" class="rounded-full bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
-            生成 PDF
-        </button>
-    </div>
-
-    <!-- html2pdf.js library for converting HTML to PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        document.getElementById('download-pdf-btn').addEventListener('click', function () {
-            const element = document.getElementById('quotation-container');
-            // Configure PDF generation options
-            const opt = {
-                margin:       1,
-                filename:     'Moonlight-Neon-Quotation.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 },
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-
-            // Generate the PDF
-            html2pdf().set(opt).from(element).save();
-        });
-    </script>
 </body>
 </html>
