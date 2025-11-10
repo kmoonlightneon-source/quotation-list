@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quotation - Moonlight Neon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { 
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+      background:#f3f4f6; margin:0; padding:20px 0; 
+    }
+    .page { 
+      width:210mm; min-height:297mm; margin:0 auto; padding:18mm; background:#fff; 
+      box-shadow:0 0 6px rgba(0,0,0,0.06); box-sizing:border-box; 
+    }
+    .logo-text { color:#00bfff; }
+    table { border-collapse:collapse; }
+    @page { size:A4; margin:0; }
+    @media print {
+      body { background: #fff; -webkit-print-color-adjust:exact; }
+      .page { box-shadow:none; margin:0; width:100%; min-height:auto; padding:12mm; }
+      #printBtn { display:none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="quotation-container">
+    <div class="flex justify-end mb-4">
+      <button id="printBtn" onclick="window.print()" class="px-4 py-2 bg-blue-600 text-white rounded shadow-sm">Print / Save as PDF</button>
+    </div>
+
+    <header class="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b pb-4 mb-4">
+      <div>
+        <h1 class="text-3xl font-extrabold text-gray-900"><span class="logo-text">Moonlight Neon</span></h1>
+        <p class="text-sm text-gray-600">718 S Hill St, Los Angeles, CA 90014</p>
+        <p class="text-sm text-gray-600">info@moonlightneon.com | https://moonlightneon.com</p>
+      </div>
+      <div class="mt-4 sm:mt-0 text-sm text-right text-gray-700">
+        <div class="text-xl font-bold">QUOTATION</div>
+        <div class="mt-1"><strong>Date:</strong> 2025/10/17</div>
+        <div><strong>Quotation #:</strong> CWI251017A</div>
+        <div class="mt-1 text-xs text-gray-500">Valid for 30 days</div>
+      </div>
+    </header>
+
+    <section class="mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">Customer Information</h3>
+      <div class="text-sm text-gray-700 space-y-1">
+        <p><strong>Full Name:</strong> Clay Winters</p>
+        <p><strong>Email:</strong> clay@callcontroltech.com</p>
+        <p><strong>Phone:</strong> +1 317-873-3737</p>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">Product Specifications</h3>
+      <div class="text-sm text-gray-700 space-y-1">
+        <p><strong>Item:</strong> Custom LED Neon Sign CWI251017A</p>
+        <p><strong>Size:</strong> 24 × 21 inches</p>
+        <p><strong>Color:</strong> Yellow</p>
+        <p><strong>Usage:</strong> Indoor</p>
+        <p><strong>Backboard:</strong> Acrylic</p>
+        <p><strong>UV-print:</strong> Yes, vector file required</p>
+        <p><strong>Accessories:</strong> Includes dimmer, remote, adapter, and mounting kit; plug & play setup within 5 minutes</p>
+        <p><strong>Cable length:</strong> 3 meter</p>
+        <p><strong>Package(s):</strong> 1</p>
+        <p><strong>You receive:</strong> Custom LED neon sign, free delivery, free dimmer & remote, free adapter, free mounting kit</p>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h3 class="font-semibold text-gray-800 mb-2">Pricing</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm" aria-label="Pricing table">
+          <thead>
+            <tr class="bg-gray-100 text-gray-700">
+              <th class="text-left px-3 py-2">Product / Service</th>
+              <th class="text-left px-3 py-2">Description</th>
+              <th class="text-right px-3 py-2">Qty</th>
+              <th class="text-right px-3 py-2">Unit Price</th>
+              <th class="text-right px-3 py-2">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="px-3 py-2 align-top">Custom LED Neon Sign</td>
+              <td class="px-3 py-2">CWI251017A — 24 × 21 in — Yellow — Acrylic backboard</td>
+              <td class="px-3 py-2 text-right">1</td>
+              <td class="px-3 py-2 text-right">$299.00</td>
+              <td class="px-3 py-2 text-right">$299.00</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-3 py-2">Shipping</td>
+              <td class="px-3 py-2">Free Shipping (Included)</td>
+              <td class="px-3 py-2 text-right">1</td>
+              <td class="px-3 py-2 text-right">$0.00</td>
+              <td class="px-3 py-2 text-right">$0.00</td>
+            </tr>
+            <tr>
+              <td colspan="4" class="text-right px-3 py-2 font-semibold bg-gray-50">Subtotal</td>
+              <td class="text-right px-3 py-2 font-semibold bg-gray-50">$299.00</td>
+            </tr>
+            <tr>
+              <td colspan="4" class="text-right px-3 py-2 font-bold bg-gray-200">GRAND TOTAL</td>
+              <td class="text-right px-3 py-2 font-bold bg-gray-200">$299.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">All prices are in USD.</p>
+    </section>
+
+    <section class="mb-6 text-sm text-gray-700">
+      <h3 class="font-semibold text-gray-800 mb-2">Payment Terms & Conditions</h3>
+      <ul class="list-disc ml-5 space-y-1">
+        <li>Full payment required before production begins.</li>
+        <li>Orders can be paid via credit card on our website.</li>
+        <li>Production time: <strong>1–3 days</strong> after design approval and payment.</li>
+        <li>Orders are non-cancellable after production begins.</li>
+        <li><strong>3-year warranty</strong> for non-human-caused damages.</li>
+      </ul>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 mt-8">
+      <p>Thank you for considering a custom neon sign from <strong>Moonlight Neon</strong>!</p>
+      <p class="mt-1">Prepared by: <strong>Moonlight Neon Sales Team</strong></p>
+    </footer>
+  </div>
+</body>
+</html>
